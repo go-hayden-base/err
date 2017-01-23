@@ -18,7 +18,7 @@ type ErrBase struct {
 }
 
 func (s *ErrBase) Error() string {
-	return "= Error => Code: " + strconv.Itoa(s.CodeNumber) + "  Message: " + s.ErrorObject.Error()
+	return "Error: { Code:" + strconv.Itoa(s.CodeNumber) + "  Message: \"" + s.ErrorObject.Error() + "\" }"
 }
 
 // Code return error code
